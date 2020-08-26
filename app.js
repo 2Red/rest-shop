@@ -19,6 +19,7 @@ mongoose.connect(`mongodb+srv://admin:admin@rest-shop.d6mrz.mongodb.net/rest-sho
 
 mongoose.Promise = global.Promise;
 
+const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 const orderRoutes = require('./routes/order');
 
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.use('/users', userRoutes);
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
 
