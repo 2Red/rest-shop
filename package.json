@@ -1,0 +1,30 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop api)",
+  "main": "app.js",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2Red/rest-shop.git"
+  },
+  "author": "nta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2Red/rest-shop/issues"
+  },
+  "homepage": "https://github.com/2Red/rest-shop#readme"
+}
