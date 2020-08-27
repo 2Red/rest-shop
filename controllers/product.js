@@ -45,7 +45,7 @@ exports.create = (req, res, next) => {
         _id: mongose.Types.ObjectId(),
         name: req.body.name,
         price: req.body.price,
-        productImage: req.file.path
+        productImage: req.file.path.split('\\').join('/').replace('public','')
     });
 
     product

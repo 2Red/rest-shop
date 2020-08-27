@@ -6,10 +6,10 @@ const checkAuth = require('../middleware/check-auth');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './uploads/');
+        cb(null, './public/uploads/');
     },
     filename: function (req, file, cb) {
-        cb(null, escape(new Date().toISOString()) + "_" + file.originalname);
+        cb(null, (new Date().toISOString()).split(":").join("_") + "-" + file.originalname);
     }
 });
 
@@ -31,7 +31,7 @@ const upload = multer({
 
 const ProductController = require('../controllers/product');
 
-router.get('/', checkAuth, ProductController.get_all);
+router.get('/', ProductController.get_all);
 
 router.get('/:productId', checkAuth, ProductController.get_by_id);
 
